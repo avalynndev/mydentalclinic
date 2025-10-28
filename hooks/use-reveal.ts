@@ -16,7 +16,7 @@ export function useReveal(threshold = 0.3) {
       {
         threshold,
         root: null,
-      }
+      },
     );
 
     const currentRef = ref.current;

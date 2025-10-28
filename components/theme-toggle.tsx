@@ -9,7 +9,7 @@ export function ThemeToggle() {
 
   return (
     <MagneticButton
-    variant="secondary"
+      variant="secondary"
       className="flex items-center justify-center rounded-md h-9 w-2"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
