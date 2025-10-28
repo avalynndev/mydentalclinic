@@ -3,7 +3,7 @@
 import { Shader, ChromaFlow, Swirl } from "shaders/react";
 import { useRef, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { HeroSection } from "@/components/sections/hero";
+import { HeroSection, HeroSectionMobile } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services";
 import { AboutSection } from "@/components/sections/about";
 import { ContactSection } from "@/components/sections/contact";
@@ -118,7 +118,12 @@ export default function Home() {
 
       <div className="relative z-10">
         <div id="hero-section">
-          <HeroSection />
+          <div className="hidden xl:flex">
+            <HeroSection />
+          </div>
+          <div className="xl:hidden flex">
+            <HeroSectionMobile />
+          </div>
         </div>
         <div id="about-section">
           <AboutSection />
