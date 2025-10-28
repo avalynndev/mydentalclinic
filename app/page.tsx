@@ -16,7 +16,7 @@ import { FeaturesSection } from "@/components/sections/features";
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const shaderContainerRef = useRef<HTMLDivElement>(null);
-  const { theme } = useTheme(); 
+  const { theme } = useTheme();
 
   useEffect(() => {
     const checkShaderReady = () => {
@@ -50,13 +50,13 @@ export default function Home() {
 
   const shaderColors = {
     dark: {
-      swirl: { colorA: "#b3dbff", colorB: "#0ea5e9" },
+      swirl: { colorA: "#0a0a0a", colorB: "#1a1a1a" },
       chroma: {
-        baseColor: "#0ea5e9",
-        upColor: "#0ea5e9",
-        downColor: "#e0f2fe",
-        leftColor: "#0ea5e9",
-        rightColor: "#e0f2fe",
+        baseColor: "#0284c7",
+        upColor: "#0369a1",
+        downColor: "#0ea5e9",
+        leftColor: "#075985",
+        rightColor: "#38bdf8",
       },
     },
     light: {
@@ -126,7 +126,9 @@ export default function Home() {
         <div id="about-section">
           <AboutSection />
         </div>
-        <FeaturesSection />
+        <div id="features-section">
+          <FeaturesSection />
+        </div>
         <div id="services-section">
           <ServicesSection />
         </div>

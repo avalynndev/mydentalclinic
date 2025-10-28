@@ -1,8 +1,7 @@
 "use client";
 
-import { Mail, MapPin } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { MagneticButton } from "@/components/magnetic-button";
 
 export function ContactSection() {
@@ -318,7 +317,7 @@ export function ContactSection() {
                 </MagneticButton>
                 {submitSuccess && (
                   <p className="mt-3 text-center font-mono text-sm text-foreground/80">
-                    Request sent! We'll contact you soon.
+                    Request sent! We&apos;ll contact you soon.
                   </p>
                 )}
               </div>

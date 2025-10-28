@@ -1,4 +1,5 @@
 import { MagneticButton } from "@/components/magnetic-button";
+import Image from "next/image";
 
 const images = [
   {
@@ -78,11 +79,16 @@ export function HeroSection() {
               key={idx}
               className="h-[320px] flex items-center justify-center p-2"
             >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="h-full w-auto rounded-lg object-cover"
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="rounded-lg object-cover"
+                  sizes="(max-width: 768px) 100vw, 540px"
+                  priority={idx < 2}
+                />
+              </div>
             </div>
           ))}
         </div>
