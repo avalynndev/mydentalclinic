@@ -17,10 +17,6 @@ export function Footer() {
             My Dentist Multispeciality Dental Clinic
           </h3>
           <p className="text-sm text-foreground/60 md:text-base">
-            Plot No 97, First Floor, Upuroopa Layout 2, Pragathinagar, Hyderabad
-            - 500090
-          </p>
-          <p className="text-sm text-foreground/60 md:text-base">
             Phone: +91 99666 48582 | Email: mydentistmdc@gmail.com
           </p>
         </div>

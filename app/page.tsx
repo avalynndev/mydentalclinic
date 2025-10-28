@@ -11,7 +11,6 @@ import { GrainOverlay } from "@/components/grain-overlay";
 import { CustomCursor } from "@/components/custom-cursor";
 import { Footer } from "@/components/sections/footer";
 import { Navbar } from "@/components/sections/navbar";
-import { FeaturesSection } from "@/components/sections/features";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -75,7 +74,7 @@ export default function Home() {
     theme === "light" ? shaderColors.light : shaderColors.dark;
 
   return (
-    <main className="relative min-h-screen w-full bg-background">
+    <main className="relative min-h-screen w-full bg-[#cccccc] dark:bg-[#161616]">
       <CustomCursor />
       <GrainOverlay />
 
@@ -112,9 +111,7 @@ export default function Home() {
           />
         </Shader>
 
-        <div
-          className={`absolute inset-0 bg-black/20 ${isLoaded ? "opacity-100" : "opacity-0"}`}
-        />
+        <div className={`absolute inset-0 bg-black/20`} />
       </div>
 
       <Navbar />
@@ -125,9 +122,6 @@ export default function Home() {
         </div>
         <div id="about-section">
           <AboutSection />
-        </div>
-        <div id="features-section">
-          <FeaturesSection />
         </div>
         <div id="services-section">
           <ServicesSection />

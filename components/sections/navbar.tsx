@@ -39,7 +39,6 @@ export function Navbar() {
         {[
           { name: "Home", id: "hero-section" },
           { name: "Services", id: "services-section" },
-          { name: "Features", id: "features-section" },
           { name: "About", id: "about-section" },
           { name: "Contact", id: "contact-section" },
         ].map((item) => (

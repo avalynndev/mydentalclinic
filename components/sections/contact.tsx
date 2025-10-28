@@ -205,7 +205,7 @@ export function ContactSection() {
                 style={{ transitionDelay: "600ms" }}
               >
                 <a
-                  href="https://www.google.com/maps/place/My+Dentist+Multispeciality+Dental+Clinic/@17.4934825,78.5553518,17z"
+                  href="https://maps.app.goo.gl/WjceZoZNwDuYp83r7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border-b border-transparent font-mono text-xs text-foreground/60 transition-all hover:border-foreground/60 hover:text-foreground/90 md:text-sm"

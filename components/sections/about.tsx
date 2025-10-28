@@ -2,6 +2,7 @@
 
 import { MagneticButton } from "@/components/magnetic-button";
 import { useReveal } from "@/hooks/use-reveal";
+import Image from "next/image";
 
 export function AboutSection() {
   const { ref, isVisible } = useReveal(0.3);
@@ -70,10 +71,49 @@ export function AboutSection() {
               }`}
               style={{ transitionDelay: "400ms" }}
             >
-              <div className="flex aspect-video items-center justify-center">
-                <p className="font-mono text-sm text-foreground/40">
-                  [Clinic Exterior Photo]
-                </p>
+              <div className="relative aspect-video w-full">
+                <Image
+                  src="/img.webp"
+                  priority
+                  fill
+                  alt="Clinic interior"
+                  className="rounded-4xl object-cover p-4"
+                />
+              </div>
+            </div>
+
+            <div
+              className={`mt-6 overflow-hidden rounded-2xl bg-foreground/10 transition-all duration-700 md:mt-8 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
+              }`}
+              style={{ transitionDelay: "600ms" }}
+            >
+              <div className="relative h-[260px] w-full">
+                <div className="absolute flex w-max animate-marquee items-center gap-6 pt-4">
+                  {[
+                    "/clinic1.webp",
+                    "/clinic2.webp",
+                    "/clinic3.webp",
+                    "/clinic4.webp",
+                    "/clinic5.webp",
+                    "/clinic6.webp",
+                    "/clinic7.webp",
+                  ].map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative h-full aspect-video min-w-[400px]"
+                    >
+                      <Image
+                        src={src}
+                        fill
+                        alt={`Clinic view ${i + 1}`}
+                        className="object-cover rounded-xl"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
