@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useReveal } from "@/hooks/use-reveal";
 
 export function ServicesSection() {
@@ -87,6 +88,8 @@ function ServiceCard({
   index: number;
   isVisible: boolean;
 }) {
+  const router = useRouter();
+
   const getRevealClass = () => {
     if (!isVisible) {
       switch (service.direction) {
@@ -105,12 +108,22 @@ function ServiceCard({
     return "translate-x-0 translate-y-0 opacity-100";
   };
 
+  const handleClick = () => {
+    if (service.title.toLowerCase() === "more") {
+      router.push("/services");
+    } else {
+      const id = service.title.toLowerCase().replace(/\s+/g, "-");
+      router.push(`/services/${id}`);
+    }
+  };
+
   return (
     <div
-      className={`group transition-all duration-700 ${getRevealClass()}`}
+      className={`group cursor-pointer transition-all duration-700 ${getRevealClass()}`}
       style={{
         transitionDelay: `${index * 100}ms`,
       }}
+      onClick={handleClick}
     >
       <div className="mb-3 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />

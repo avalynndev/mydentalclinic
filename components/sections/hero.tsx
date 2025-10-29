@@ -100,7 +100,6 @@ export function HeroSection() {
 export function HeroSectionMobile() {
   return (
     <section className="relative flex min-h-screen flex-col lg:flex-row justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 lg:py-0 w-full max-w-7xl mx-auto gap-8 lg:gap-12 xl:gap-16">
-      {/* Content Section */}
       <div className="w-full lg:w-1/2 max-w-2xl lg:max-w-none pt-24">
         <div className="mb-4 inline-block rounded-full border border-foreground/20 bg-foreground/15 px-3 sm:px-4 py-1 sm:py-1.5 backdrop-blur-md">
           <p className="font-mono text-[10px] sm:text-xs text-foreground/90">
@@ -150,7 +149,6 @@ export function HeroSectionMobile() {
         </div>
       </div>
 
-      {/* Image Carousel Section */}
       <div className="relative w-full lg:w-1/2 max-w-md lg:max-w-none">
         <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] overflow-hidden rounded-xl sm:rounded-2xl border border-foreground/10 bg-foreground/5">
           <div className="absolute w-full flex flex-col animate-vertical-marquee">
