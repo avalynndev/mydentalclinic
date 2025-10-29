@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MagneticButton } from "../magnetic-button";
 import { ThemeToggle } from "../theme-toggle";
+import Image from "next/image";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,21 +29,7 @@ export function Navbar() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="flex items-center gap-2 transition-transform hover:scale-105"
       >
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-          <svg
-            className="h-6 w-6 text-foreground"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-            />
-          </svg>
-        </div>
+         <Image src="/icon0.svg" alt="logo" width="32" height="32"/>
         <span className="font-sans text-xl font-semibold tracking-tight text-foreground">
           MyDentist
         </span>

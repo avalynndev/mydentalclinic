@@ -17,16 +17,30 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.phone || !formData.message) {
-      return;
-    }
+    if (!formData.name || !formData.phone || !formData.message) return;
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    setFormData({ name: "", phone: "", message: "" });
-    setTimeout(() => setSubmitSuccess(false), 5000);
+    setSubmitSuccess(false);
+
+    try {
+      const res = await fetch("/api/resend", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      console.log(res);
+
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      setSubmitSuccess(true);
+      setFormData({ name: "", phone: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
