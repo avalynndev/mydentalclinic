@@ -21,37 +21,14 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: ["dental", "clinic", "dentist", ""],
+  keywords: ["dental", "clinic", "dentist"],
   creator: "avalynndev",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    images: [
-      {
-        url: `${siteConfig.url}/opengraph-image.png`,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/opengraph-image.png`],
-    creator: "@shadcn",
-  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: `${siteConfig.url}/manifest.json`,
 };
 
 export default function RootLayout({
