@@ -29,7 +29,7 @@ export function Navbar() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="flex items-center gap-2 transition-transform hover:scale-105"
       >
-         <Image src="/icon0.svg" alt="logo" width="32" height="32"/>
+        <Image src="/icon0.svg" alt="logo" width="32" height="32" />
         <span className="font-sans text-xl font-semibold tracking-tight text-foreground">
           MyDentist
         </span>
