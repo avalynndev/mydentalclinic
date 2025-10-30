@@ -72,28 +72,10 @@ export function AboutSection() {
               style={{ transitionDelay: "400ms" }}
             >
               <div className="relative aspect-video w-full">
-                <Image
-                  src="/img.webp"
-                  priority
-                  fill
-                  alt="Clinic interior"
-                  className="rounded-4xl object-cover p-4"
-                />
-              </div>
-            </div>
-
-            <div
-              className={`mt-6 overflow-hidden rounded-2xl bg-foreground/10 transition-all duration-700 md:mt-8 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
-              }`}
-              style={{ transitionDelay: "600ms" }}
-            >
-              <div className="relative h-[260px] w-full">
                 <div className="absolute flex w-max animate-marquee items-center gap-6 pt-4">
                   {[
                     "/clinic1.webp",
+                    "/img.webp",
                     "/clinic2.webp",
                     "/clinic3.webp",
                     "/clinic4.webp",
@@ -103,7 +85,7 @@ export function AboutSection() {
                   ].map((src, i) => (
                     <div
                       key={i}
-                      className="relative h-full aspect-video min-w-[400px]"
+                      className="relative h-full aspect-video min-w-[535px]"
                     >
                       <Image
                         src={src}
