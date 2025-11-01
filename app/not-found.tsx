@@ -7,7 +7,7 @@ import { GrainOverlay } from "@/components/grain-overlay";
 import { CustomCursor } from "@/components/custom-cursor";
 import { Navbar } from "@/components/sections/navbar";
 
-export default function Home() {
+export default function NotFound() {
   const [isLoaded, setIsLoaded] = useState(false);
   const shaderContainerRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();

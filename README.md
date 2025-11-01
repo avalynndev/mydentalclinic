@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Dentist Multispeciality Dental Clinic
+
+Modern, responsive website for My Dentist Multispeciality Dental Clinic in Hyderabad.
+
+## Features
+
+- Dark/Light theme support
+- Fully responsive design
+- Beautiful animated UI with custom shaders
+- Contact form with email integration
+- Built with Next.js 16 and React 19
+- Smooth scroll animations
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ or Bun
+- Package manager (npm, yarn, pnpm, or bun)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
+```
+
+3. Set up environment variables:
+
+Create a `.env.local` file in the root directory:
+
+```
+RESEND_API_KEY=your_resend_api_key_here
+```
+
+4. Run the development server:
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+mydentalclinic/
+├── app/                # Next.js app directory
+│   ├── api/           # API routes
+│   ├── layout.tsx     # Root layout
+│   └── page.tsx       # Home page
+├── components/         # React components
+│   ├── sections/      # Page sections
+│   └── ...
+├── config/            # Site configuration
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions
+└── public/            # Static assets
+```
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 16** - React framework
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Resend** - Email sending
+- **Shaders** - WebGL effects
+- **Next Themes** - Theme management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+My Dentist Multispeciality Dental Clinic  
+Plot No 97, First Floor, Upuroopa Layout 2, Pragathinagar  
+Hyderabad - 500090
 
-## Deploy on Vercel
+Phone: +91 99666 48582  
+Email: mydentistmdc@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All rights reserved © 2025 My Dentist Multispeciality Dental Clinic

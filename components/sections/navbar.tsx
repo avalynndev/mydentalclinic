@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { MagneticButton } from "../magnetic-button";
 import { ThemeToggle } from "../theme-toggle";
 import Image from "next/image";

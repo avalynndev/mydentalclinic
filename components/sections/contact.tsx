@@ -28,14 +28,12 @@ export function ContactSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      console.log(res);
 
       if (!res.ok) throw new Error("Failed to send message");
 
       setSubmitSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
     } catch (err) {
-      console.error(err);
       alert("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
@@ -52,11 +50,10 @@ export function ContactSection() {
         <div className="grid gap-8 md:grid-cols-[1.1fr_1fr] md:gap-10 lg:gap-12">
           <div className="flex flex-col justify-center">
             <div
-              className={`mb-6 transition-all duration-700 md:mb-12 ${
-                isVisible
-                  ? "translate-x-0 opacity-100"
-                  : "-translate-x-12 opacity-0"
-              }`}
+              className={`mb-6 transition-all duration-700 md:mb-12 ${isVisible
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-12 opacity-0"
+                }`}
             >
               <h2 className="mb-2 font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground md:mb-3 md:text-7xl lg:text-8xl">
                 Get in
@@ -71,11 +68,10 @@ export function ContactSection() {
             <div className="space-y-4 md:space-y-6">
               <a
                 href="tel:+919966648582"
-                className={`group block transition-all duration-700 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-16 opacity-0"
-                }`}
+                className={`group block transition-all duration-700 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-16 opacity-0"
+                  }`}
                 style={{ transitionDelay: "200ms" }}
               >
                 <div className="mb-1 flex items-center gap-2">
@@ -103,11 +99,10 @@ export function ContactSection() {
 
               <a
                 href="mailto:mydentistmdc@gmail.com"
-                className={`group block transition-all duration-700 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-16 opacity-0"
-                }`}
+                className={`group block transition-all duration-700 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-16 opacity-0"
+                  }`}
                 style={{ transitionDelay: "300ms" }}
               >
                 <div className="mb-1 flex items-center gap-2">
@@ -134,11 +129,10 @@ export function ContactSection() {
               </a>
 
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-12 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
+                  }`}
                 style={{ transitionDelay: "400ms" }}
               >
                 <div className="mb-1 flex items-center gap-2">
@@ -175,11 +169,10 @@ export function ContactSection() {
               </div>
 
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-12 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
+                  }`}
                 style={{ transitionDelay: "500ms" }}
               >
                 <div className="mb-1 flex items-center gap-2">
@@ -210,11 +203,10 @@ export function ContactSection() {
               </div>
 
               <div
-                className={`pt-2 transition-all duration-700 md:pt-4 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-8 opacity-0"
-                }`}
+                className={`pt-2 transition-all duration-700 md:pt-4 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-8 opacity-0"
+                  }`}
                 style={{ transitionDelay: "600ms" }}
               >
                 <a
@@ -245,11 +237,10 @@ export function ContactSection() {
           <div className="flex flex-col justify-center">
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-16 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-16 opacity-0"
+                  }`}
                 style={{ transitionDelay: "200ms" }}
               >
                 <label className="mb-1 block font-mono text-xs text-foreground/60 md:mb-2">
@@ -268,11 +259,10 @@ export function ContactSection() {
               </div>
 
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-16 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-16 opacity-0"
+                  }`}
                 style={{ transitionDelay: "350ms" }}
               >
                 <label className="mb-1 block font-mono text-xs text-foreground/60 md:mb-2">
@@ -291,11 +281,10 @@ export function ContactSection() {
               </div>
 
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-16 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-16 opacity-0"
+                  }`}
                 style={{ transitionDelay: "500ms" }}
               >
                 <label className="mb-1 block font-mono text-xs text-foreground/60 md:mb-2">
@@ -314,11 +303,10 @@ export function ContactSection() {
               </div>
 
               <div
-                className={`transition-all duration-700 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-12 opacity-0"
-                }`}
+                className={`transition-all duration-700 ${isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
+                  }`}
                 style={{ transitionDelay: "650ms" }}
               >
                 <MagneticButton

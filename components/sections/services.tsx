@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useReveal } from "@/hooks/use-reveal";
 
 export function ServicesSection() {
@@ -13,11 +12,10 @@ export function ServicesSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "-translate-y-12 opacity-0"
-          }`}
+          className={`mb-12 transition-all duration-700 md:mb-16 ${isVisible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-12 opacity-0"
+            }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Our Services
@@ -88,8 +86,6 @@ function ServiceCard({
   index: number;
   isVisible: boolean;
 }) {
-  const router = useRouter();
-
   const getRevealClass = () => {
     if (!isVisible) {
       switch (service.direction) {
@@ -109,11 +105,10 @@ function ServiceCard({
   };
 
   const handleClick = () => {
-    if (service.title.toLowerCase() === "more") {
-      router.push("/services");
-    } else {
-      const id = service.title.toLowerCase().replace(/\s+/g, "-");
-      router.push(`/services/${id}`);
+    // Scroll to contact section to book appointment for this service
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 

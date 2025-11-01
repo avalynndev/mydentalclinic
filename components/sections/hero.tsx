@@ -3,20 +3,20 @@ import Image from "next/image";
 
 const images = [
   {
-    src: "https://cdn.prod.website-files.com/6230bfc886c8142108c44052/63910d5d9fa61e2f88038d57_1.jpg",
-    alt: "Inside of dentist office in San Francisco",
+    src: "/clinic1.webp",
+    alt: "Modern dental clinic interior",
   },
   {
-    src: "https://cdn.prod.website-files.com/6230bfc886c8142108c44052/63910d5e80490749e9d59736_2.webp",
-    alt: "Inside of Dentist office in Mountain View",
+    src: "/clinic2.webp",
+    alt: "Dental clinic treatment room",
   },
   {
-    src: "https://cdn.prod.website-files.com/6230bfc886c8142108c44052/63910d5efdc36f55f398e9d8_3.jpg",
-    alt: "Inside of Dentist office in Mountain View - third image",
+    src: "/clinic3.webp",
+    alt: "State-of-the-art dental equipment",
   },
   {
-    src: "https://cdn.prod.website-files.com/6230bfc886c8142108c44052/63910d5e89bf4f9d3e5d7a37_4.webp",
-    alt: "Inside of Dentist office in Mountain View - second image",
+    src: "/clinic4.webp",
+    alt: "Comfortable dental care environment",
   },
 ];
 

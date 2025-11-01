@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "My Dentist Website <onboarding@resend.dev>",
-      to: "avalynndev@gmail.com",
+      to: "mydentistmdc@gmail.com",
       subject: "New Appointment Request",
       html: `
         <h2>New Appointment Request</h2>

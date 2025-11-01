@@ -25,8 +25,7 @@ export const metadata: Metadata = {
   creator: "avalynndev",
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    apple: "/apple-icon.png",
   },
   manifest: `${siteConfig.url}/manifest.json`,
 };
